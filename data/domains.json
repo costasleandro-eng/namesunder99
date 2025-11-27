@@ -1,14 +1,406 @@
 [
   {
-    "domain": "TestDomainOne.com",
-    "price": 99
+    "domain": "CarsCook.com",
+    "price": 96
   },
   {
-    "domain": "TestDomainTwo.com",
-    "price": 99
+    "domain": "TrendAllocate.com",
+    "price": 96
   },
   {
-    "domain": "TestDomainThree.com",
-    "price": 99
+    "domain": "PurposeVillage.com",
+    "price": 96
+  },
+  {
+    "domain": "CapClothing.com",
+    "price": 96
+  },
+  {
+    "domain": "ProPlayerCare.com",
+    "price": 96
+  },
+  {
+    "domain": "Pochiz.com",
+    "price": 96
+  },
+  {
+    "domain": "NiceWorlds.com",
+    "price": 96
+  },
+  {
+    "domain": "WorthRacks.com",
+    "price": 96
+  },
+  {
+    "domain": "OptyFy.com",
+    "price": 96
+  },
+  {
+    "domain": "ScriptPax.com",
+    "price": 96
+  },
+  {
+    "domain": "JabFree.com",
+    "price": 96
+  },
+  {
+    "domain": "AidSummer.com",
+    "price": 96
+  },
+  {
+    "domain": "HomeRundle.com",
+    "price": 96
+  },
+  {
+    "domain": "SMastery.com",
+    "price": 79
+  },
+  {
+    "domain": "AtAthens.com",
+    "price": 79
+  },
+  {
+    "domain": "OutNor.com",
+    "price": 79
+  },
+  {
+    "domain": "BinaryReign.com",
+    "price": 79
+  },
+  {
+    "domain": "DreamsCareer.com",
+    "price": 79
+  },
+  {
+    "domain": "BugArena.com",
+    "price": 79
+  },
+  {
+    "domain": "AskMasters.com",
+    "price": 79
+  },
+  {
+    "domain": "HopeHash.com",
+    "price": 79
+  },
+  {
+    "domain": "Disteam.com",
+    "price": 79
+  },
+  {
+    "domain": "GrooveClamps.com",
+    "price": 79
+  },
+  {
+    "domain": "SplashHydro.com",
+    "price": 79
+  },
+  {
+    "domain": "ItsaFront.com",
+    "price": 79
+  },
+  {
+    "domain": "HartAnd.com",
+    "price": 79
+  },
+  {
+    "domain": "TheEnchantment.com",
+    "price": 79
+  },
+  {
+    "domain": "DivineWolves.com",
+    "price": 79
+  },
+  {
+    "domain": "CitiFarmer.com",
+    "price": 79
+  },
+  {
+    "domain": "ToBeSpa.com",
+    "price": 79
+  },
+  {
+    "domain": "MilitaryAir.com",
+    "price": 79
+  },
+  {
+    "domain": "Baljem.com",
+    "price": 79
+  },
+  {
+    "domain": "OrbisHeater.com",
+    "price": 79
+  },
+  {
+    "domain": "EdgeWoodWorks.com",
+    "price": 79
+  },
+  {
+    "domain": "ImpactPain.com",
+    "price": 79
+  },
+  {
+    "domain": "SusWork.com",
+    "price": 79
+  },
+  {
+    "domain": "ReInvestCon.com",
+    "price": 79
+  },
+  {
+    "domain": "UrgentDogs.com",
+    "price": 79
+  },
+  {
+    "domain": "PragMates.com",
+    "price": 79
+  },
+  {
+    "domain": "LoveCovering.com",
+    "price": 79
+  },
+  {
+    "domain": "StokesArt.com",
+    "price": 79
+  },
+  {
+    "domain": "SelectSana.com",
+    "price": 79
+  },
+  {
+    "domain": "BurgersAnd.com",
+    "price": 79
+  },
+  {
+    "domain": "NightChanges.com",
+    "price": 79
+  },
+  {
+    "domain": "WriterBrand.com",
+    "price": 79
+  },
+  {
+    "domain": "EndUseLabs.com",
+    "price": 79
+  },
+  {
+    "domain": "DayApe.com",
+    "price": 79
+  },
+  {
+    "domain": "CauseAlign.com",
+    "price": 79
+  },
+  {
+    "domain": "SlothTrade.com",
+    "price": 79
+  },
+  {
+    "domain": "ChildsDance.com",
+    "price": 79
+  },
+  {
+    "domain": "ReachClicks.com",
+    "price": 79
+  },
+  {
+    "domain": "VapourFuel.com",
+    "price": 79
+  },
+  {
+    "domain": "BossDoge.com",
+    "price": 79
+  },
+  {
+    "domain": "ShopWheeler.com",
+    "price": 79
+  },
+  {
+    "domain": "PromiseBed.com",
+    "price": 79
+  },
+  {
+    "domain": "ReModelAge.com",
+    "price": 79
+  },
+  {
+    "domain": "ForCrane.com",
+    "price": 79
+  },
+  {
+    "domain": "ChurchesInAmerica.com",
+    "price": 79
+  },
+  {
+    "domain": "TimeMonday.com",
+    "price": 79
+  },
+  {
+    "domain": "AsAlso.com",
+    "price": 79
+  },
+  {
+    "domain": "WinesAnd.com",
+    "price": 79
+  },
+  {
+    "domain": "LoungeSummit.com",
+    "price": 79
+  },
+  {
+    "domain": "BizEmperor.com",
+    "price": 79
+  },
+  {
+    "domain": "SquirrelWare.com",
+    "price": 79
+  },
+  {
+    "domain": "AtShowcase.com",
+    "price": 79
+  },
+  {
+    "domain": "FeeGame.com",
+    "price": 79
+  },
+  {
+    "domain": "TreasureAnd.com",
+    "price": 79
+  },
+  {
+    "domain": "RankBuck.com",
+    "price": 79
+  },
+  {
+    "domain": "GuardSanta.com",
+    "price": 79
+  },
+  {
+    "domain": "GuaranteedOn.com",
+    "price": 79
+  },
+  {
+    "domain": "QubeStation.com",
+    "price": 79
+  },
+  {
+    "domain": "SaveTrails.com",
+    "price": 79
+  },
+  {
+    "domain": "HeroRegistration.com",
+    "price": 79
+  },
+  {
+    "domain": "SoCreators.com",
+    "price": 79
+  },
+  {
+    "domain": "BytesAbout.com",
+    "price": 79
+  },
+  {
+    "domain": "EnvelopedLife.com",
+    "price": 79
+  },
+  {
+    "domain": "PuClick.com",
+    "price": 79
+  },
+  {
+    "domain": "RepoTag.com",
+    "price": 79
+  },
+  {
+    "domain": "SailMaven.com",
+    "price": 79
+  },
+  {
+    "domain": "ChallengeHill.com",
+    "price": 79
+  },
+  {
+    "domain": "SaleAnd.com",
+    "price": 79
+  },
+  {
+    "domain": "WillAuction.com",
+    "price": 79
+  },
+  {
+    "domain": "MeUnit.com",
+    "price": 79
+  },
+  {
+    "domain": "HorseAnd.com",
+    "price": 79
+  },
+  {
+    "domain": "PushDom.com",
+    "price": 79
+  },
+  {
+    "domain": "HeartMantle.com",
+    "price": 79
+  },
+  {
+    "domain": "RockLace.com",
+    "price": 79
+  },
+  {
+    "domain": "PartnerAnd.com",
+    "price": 79
+  },
+  {
+    "domain": "MadResort.com",
+    "price": 79
+  },
+  {
+    "domain": "OrFrame.com",
+    "price": 79
+  },
+  {
+    "domain": "SoCount.com",
+    "price": 79
+  },
+  {
+    "domain": "DeskThere.com",
+    "price": 79
+  },
+  {
+    "domain": "AudioCeo.com",
+    "price": 79
+  },
+  {
+    "domain": "BizzVendor.com",
+    "price": 79
+  },
+  {
+    "domain": "LoungeExpo.com",
+    "price": 79
+  },
+  {
+    "domain": "LocationWeek.com",
+    "price": 79
+  },
+  {
+    "domain": "CollegeVolley.com",
+    "price": 79
+  },
+  {
+    "domain": "AndMovement.com",
+    "price": 79
+  },
+  {
+    "domain": "ProtectDo.com",
+    "price": 79
+  },
+  {
+    "domain": "PrivateSee.com",
+    "price": 79
+  },
+  {
+    "domain": "PerlPad.com",
+    "price": 79
   }
 ]
