@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NamesUnder99</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<h1>NamesUnder99</h1>
+<p>Good domains. Under $99.</p>
+
+<div id="list"></div>
+
+<script>
+fetch('/data/domains.json')
+  .then(r => r.json())
+  .then(domains => {
+    const list = document.getElementById('list');
+    list.innerHTML = domains.map(d => `
+      <div class="item">
+        <span class="domain">${d.domain}</span>
+        <span class="price">$${d.price}</span>
+        <a class="buy" href="#">Buy Now</a>
+      </div>
+    `).join('');
+  });
+</script>
+
+</body>
+</html>
