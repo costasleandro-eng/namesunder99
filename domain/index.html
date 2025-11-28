@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Domain landing</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<div id="content">Loading...</div>
+
+<script>
+// 1. Obtener el dominio desde la URL
+const urlParts = window.location.pathname.split("/");
+const domainName = urlParts.pop() || urlParts.pop(); // maneja trailing slash
+
+// 2. Cargar domains.json
+fetch('/data/domains.json')
+  .then(r => r.json())
+  .then(domains => {
+    const data = domains.find(d => d.domain === domainName);
+
+    if (!data) {
+      document.getElementById("content").innerHTML = `
+        <h1>Domain not found</h1>
+      `;
+      return;
+    }
+
+    // 3. Construir landing
+    document.getElementById("content").innerHTML = `
+      <h1>${data.domain}</h1>
+      <p>Price: <strong>$${data.price}</strong></p>
+
+      <a class="buy" href="#">
+        Buy Now
+      </a>
+
+      <p style="margin-top:30px;">
+        <a href="/">⬅ Back to catalog</a>
+      </p>
+    `;
+  });
+</script>
+
+</body>
+</html>
