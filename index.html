@@ -10,20 +10,50 @@
 <h1>NamesUnder99</h1>
 <p>Good domains. Under $99.</p>
 
+<div class="search-box">
+  <input id="search" type="text" placeholder="Search domains...">
+</div>
+
 <div id="list"></div>
 
 <script>
+let allDomains = [];
+
+function renderList(domains) {
+  const list = document.getElementById('list');
+
+  if (!domains.length) {
+    list.innerHTML = `<p>No domains found.</p>`;
+    return;
+  }
+
+  list.innerHTML = domains.map(d => `
+    <div class="item">
+      <span class="domain">${d.domain}</span>
+      <span class="price">$${d.price}</span>
+      <a class="buy" href="/domain/?d=${encodeURIComponent(d.domain)}">View</a>
+    </div>
+  `).join('');
+}
+
+// Cargar dominios al inicio
 fetch('/data/domains.json')
   .then(r => r.json())
   .then(domains => {
-    const list = document.getElementById('list');
-   list.innerHTML = domains.map(d => `
-  <div class="item">
-    <span class="domain">${d.domain}</span>
-    <span class="price">$${d.price}</span>
-    <a class="buy" href="/domain/?d=${encodeURIComponent(d.domain)}">View</a>
-  </div>
-`).join('');
+    allDomains = domains;
+    renderList(allDomains);
+
+    // Configurar buscador
+    const searchInput = document.getElementById('search');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const q = searchInput.value.trim().toLowerCase();
+        const filtered = allDomains.filter(d =>
+          d.domain.toLowerCase().includes(q)
+        );
+        renderList(filtered);
+      });
+    }
   });
 </script>
 
