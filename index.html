@@ -17,13 +17,13 @@ fetch('/data/domains.json')
   .then(r => r.json())
   .then(domains => {
     const list = document.getElementById('list');
-    list.innerHTML = domains.map(d => `
-      <div class="item">
-        <span class="domain">${d.domain}</span>
-        <span class="price">$${d.price}</span>
-        <a class="buy" href="#">Buy Now</a>
-      </div>
-    `).join('');
+   list.innerHTML = domains.map(d => `
+  <div class="item">
+    <span class="domain">${d.domain}</span>
+    <span class="price">$${d.price}</span>
+    <a class="buy" href="/domain/?d=${encodeURIComponent(d.domain)}">View</a>
+  </div>
+`).join('');
   });
 </script>
 
