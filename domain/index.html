@@ -39,17 +39,22 @@ if (!domainName) {
       document.title = data.domain + " | NamesUnder99";
 
       document.getElementById("content").innerHTML = `
-        <h1>${data.domain}</h1>
-        <p>Price: <strong>$${data.price}</strong></p>
+  <h1>${data.domain}</h1>
 
-        <a class="buy" href="#">
-          Buy Now
-        </a>
+  ${data.category ? `<p><strong>Category:</strong> ${data.category}</p>` : ''}
 
-        <p style="margin-top:30px;">
-          <a href="/">⬅ Back to catalog</a>
-        </p>
-      `;
+  <p><strong>Price:</strong> $${data.price}</p>
+
+  ${data.notes ? `<p style="margin-top: 16px;">${data.notes}</p>` : ''}
+
+  <a class="buy" href="#">
+    Buy Now
+  </a>
+
+  <p style="margin-top:30px;">
+    <a href="/">⬅ Back to catalog</a>
+  </p>
+`;
     });
 }
 </script>
