@@ -27,13 +27,19 @@ function renderList(domains) {
     return;
   }
 
-  list.innerHTML = domains.map(d => `
-    <div class="item">
-      <span class="domain">${d.domain}</span>
-      <span class="price">$${d.price}</span>
-      <a class="buy" href="/domain/?d=${encodeURIComponent(d.domain)}">View</a>
-    </div>
-  `).join('');
+  list.innerHTML = domains.map(d => {
+    const category = d.category || ''; // por si algún dominio aún no tiene categoría
+    return `
+      <div class="item">
+        <div class="item-main">
+          <span class="domain">${d.domain}</span>
+          ${category ? `<span class="category">${category}</span>` : ''}
+        </div>
+        <span class="price">$${d.price}</span>
+        <a class="buy" href="/domain/?d=${encodeURIComponent(d.domain)}">View</a>
+      </div>
+    `;
+  }).join('');
 }
 
 // Cargar dominios al inicio
