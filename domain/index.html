@@ -38,23 +38,60 @@ if (!domainName) {
       // 3. Construir la landing de ese dominio
       document.title = data.domain + " | NamesUnder99";
 
+      const tag = data.tag || "";
+      const domainType = data["domain type"] || "";
+      const chars = data.characters;
+      const tldCount = data["tld registered count"];
+      const sldCount = data["domains containing sld count"];
+      const age = data["domain age (year created)"];
+      const ghRepos = data["github repository count"];
+      const estibot = data["estibot estimated valuation"];
+      const godaddy = data["godaddy estimated valuation"];
+      const brandpa = data["brandpa estimated valuation"];
+      const atom = data["atom estimated valuation"];
+
       document.getElementById("content").innerHTML = `
-  <h1>${data.domain}</h1>
+        <h1>${data.domain}</h1>
 
-  ${data.category ? `<p><strong>Category:</strong> ${data.category}</p>` : ''}
+        ${data.category ? `<p><strong>Category:</strong> ${data.category}</p>` : ""}
 
-  <p><strong>Price:</strong> $${data.price}</p>
+        ${tag ? `<p><strong>Tag:</strong> ${tag}</p>` : ""}
 
-  ${data.notes ? `<p style="margin-top: 16px;">${data.notes}</p>` : ''}
+        ${domainType ? `<p><strong>Type:</strong> ${domainType}</p>` : ""}
 
-  <a class="buy" href="#">
-    Buy Now
-  </a>
+        <p><strong>Price:</strong> $${data.price}</p>
 
-  <p style="margin-top:30px;">
-    <a href="/">⬅ Back to catalog</a>
-  </p>
-`;
+        ${data.notes ? `<p style="margin-top: 12px;">${data.notes}</p>` : ""}
+
+        <div style="margin-top: 24px;">
+          <h3>Domain details</h3>
+          <ul>
+            ${chars ? `<li><strong>Characters:</strong> ${chars}</li>` : ""}
+            ${tldCount ? `<li><strong>TLDs registered:</strong> ${tldCount}</li>` : ""}
+            ${sldCount ? `<li><strong>Domains containing SLD:</strong> ${sldCount}</li>` : ""}
+            ${age ? `<li><strong>Year created:</strong> ${age}</li>` : ""}
+            ${ghRepos ? `<li><strong>GitHub repos using this term:</strong> ${ghRepos}</li>` : ""}
+          </ul>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <h3>Valuation (third-party)</h3>
+          <ul>
+            ${estibot ? `<li><strong>Estibot:</strong> $${estibot}</li>` : ""}
+            ${godaddy ? `<li><strong>GoDaddy:</strong> $${godaddy}</li>` : ""}
+            ${brandpa ? `<li><strong>Brandpa:</strong> $${brandpa}</li>` : ""}
+            ${atom ? `<li><strong>Atom:</strong> $${atom}</li>` : ""}
+          </ul>
+        </div>
+
+        <a class="buy" href="#" style="margin-top: 24px; display: inline-block;">
+          Buy Now
+        </a>
+
+        <p style="margin-top:30px;">
+          <a href="/">⬅ Back to catalog</a>
+        </p>
+      `;
     });
 }
 </script>
