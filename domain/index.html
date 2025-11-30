@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://www.atom.com/scripts/pay-with-atom.js"></script>
 <head>
   <meta charset="UTF-8">
   <title>Domain landing</title>
@@ -85,14 +87,17 @@ if (!domainName) {
           </ul>
         </div>
 
-        ${atompay ? `
-          <a class="buy" 
-             href="${atompay}" 
-             target="_blank" 
-             style="margin-top: 24px; display: inline-block;">
-            Buy Now
-          </a>
-        ` : ""}
+        <button class="pay-with-atom"
+        data-domain-name="${data.domain}"
+        data-domain-price="${data.price}"
+        data-token="622cbb71ef405fd2"
+        data-installments=""
+        data-down-payment=""
+        data-host-name="https://www.atom.com"
+        style="margin-top: 24px;">
+  <span>Buy With</span>
+  <img src="https://www.atom.com/assets/pay.png" alt="Atom Logo" style="height:14px; vertical-align:middle;">
+</button>
 
         <p style="margin-top:30px;">
           <a href="/">⬅ Back to catalog</a>
