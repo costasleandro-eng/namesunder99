@@ -20,7 +20,7 @@ if (!domainName) {
     <p><a href="/">⬅ Back to catalog</a></p>
   `;
 } else {
-  // 2. Cargar el JSON de dominios
+  // 2. Cargar JSON
   fetch('/data/domains.json')
     .then(r => r.json())
     .then(domains => {
@@ -35,7 +35,7 @@ if (!domainName) {
         return;
       }
 
-      // 3. Construir la landing de ese dominio
+      // 3. Variables
       document.title = data.domain + " | NamesUnder99";
 
       const tag = data.tag || "";
@@ -50,6 +50,19 @@ if (!domainName) {
       const brandpa = data["brandpa estimated valuation"];
       const atom = data["atom estimated valuation"];
 
+      // 4. Botón Buy Now (solo si hay atompay)
+      const buyButton = data.atompay
+        ? `
+        <a class="buy"
+           href="${data.atompay}"
+           target="_blank"
+           style="margin-top: 24px; display: inline-block;">
+          Buy Now
+        </a>
+        `
+        : "";
+
+      // 5. Render completo
       document.getElementById("content").innerHTML = `
         <h1>${data.domain}</h1>
 
@@ -84,9 +97,7 @@ if (!domainName) {
           </ul>
         </div>
 
-        <a class="buy" href="#" style="margin-top: 24px; display: inline-block;">
-          Buy Now
-        </a>
+        ${buyButton}
 
         <p style="margin-top:30px;">
           <a href="/">⬅ Back to catalog</a>
